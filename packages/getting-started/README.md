@@ -7,7 +7,7 @@ Starting from nothing to an application running against and actual Hyperledger f
 You need to perform the following extra steps to get the sample to work.
 - mkdir -p ~/.composer-connection-profiles/defaultProfile
 - cd sample-applications-hlfv1/packages/getting-started
-- open connection.json with your preferred editor and change the line
+- open hlfv1/connection.json with your preferred editor and change the line
 ```
 "keyValStore": "YOUR_HOME_DIR/.hfc-key-store",
 ```
