@@ -16,7 +16,7 @@
         "eventURL":"grpc://localhost:7058"
       }
     ],
-    "keyValStore": "/Users/Fenglian/.hfc-key-store",
+    "keyValStore": "YOUR_HOME_DIR/.hfc-key-store",
     "channel": "mychannel",
     "mspID": "Org1MSP",
     "deployWaitTime": "300",
