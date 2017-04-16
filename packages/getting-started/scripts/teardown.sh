@@ -11,7 +11,7 @@ cd "${DIR}"/hlfv1
 docker-compose -f hlfv1_alpha-docker-compose.yml kill && docker-compose -f hlfv1_alpha-docker-compose.yml down
 
 # remove the local state
-#rm -rf ~/.composer-connection-profiles/defaultProfile
-#rm -f ~/.composer-credentials/*
+#rm -rf ~/.composer-connection-profiles/hlfv1
+#rm -f ~/.hfc-key-store/*
 
 # Your system is now clean
