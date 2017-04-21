@@ -10,8 +10,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
 cd "${DIR}"/hlfv1
 
 docker-compose -f hlfv1_alpha-docker-compose.yml down
-docker rm $(docker ps -aq) ||
-docker-compose -f hlfv1_alpha-docker-compose.yml up -d
+docker rm $(docker ps -aq) || docker-compose -f hlfv1_alpha-docker-compose.yml up -d
 
 # wait for Hyperledger Fabric to start 
 sleep 10
