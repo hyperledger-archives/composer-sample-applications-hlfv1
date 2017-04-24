@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:fabric-composer/sample-applications"
+    "url": "git@github.com:hyperledger/composer-sample-applications-hlfv1"
   },
   "keywords": [
     "Blockchain",
     "Solutions",
     "Framework",
     "getting-started",
-    "Fabric Composer"
+    "Hyperledger Composer"
   ],
   "author": "Author",
   "license": "ISC",
