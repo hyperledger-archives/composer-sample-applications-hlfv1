@@ -3,21 +3,17 @@
   "version": "1.0.0",
   "description": "The repository for the Fabric Composer Getting Started application",
   "main": "index.js",
-  "config": { "hlfv": "hlfv1"},
   "scripts": {
     "preinstall": "composer --version || { echo 'Please first run npm install -g composer-cli' ; exit 1;} ",
     "test": "mocha --recursive && npm run bootstrapAssets && npm run listAssets && npm run submitTransaction",
     "submitTransaction": "node cli.js landregistry submit && node cli.js landregistry list",
     "listAssets": "node cli.js landregistry list",
     "bootstrapAssets": "node cli.js landregistry bootstrap",
-    "download": "composer run --dir $npm_package_config_hlfv --download",
-    "createProfile": "composer run --dir $npm_package_config_hlfv --createProfile",
-    "startHLF": "composer run --dir $npm_package_config_hlfv --start",
-    "stopHLF": "composer run --dir $npm_package_config_hlfv --stop",
+    "startHLF": "scripts/start-hyperledger.sh",
+    "stopHLF": "scripts/stop-hyperledger.sh",
     "teardownHLF": "scripts/teardown.sh",
-    "createNetwork": "composer archive create --sourceName digitalproperty-network --sourceType module --archiveFile digitalPropertyNetwork.bna",
-    "deployNetwork": "scripts/deployNetwork.sh $npm_package_config_hlfv",
-    "postinstall": "npm run download && npm run createProfile && npm run startHLF && npm run createNetwork && npm run deployNetwork"
+    "deployNetwork": "composer archive create --sourceName digitalproperty-network --sourceType module --archiveFile digitalPropertyNetwork.bna && composer network deploy --archiveFile digitalPropertyNetwork.bna  -p hlfv1 -i admin -s adminpw && composer network list -n digitalproperty-network -p hlfv1 -i admin -s adminpw",
+    "postinstall": "scripts/download-hyperledger.sh && scripts/createProfile.sh && npm run startHLF && npm run deployNetwork"
   },
   "repository": {
     "type": "git",
