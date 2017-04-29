@@ -8,7 +8,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
 
 # Shut down the Docker containers for the system tests.
 cd "${DIR}"/hlfv1
-docker-compose -f hlfv1_alpha-docker-compose.yml kill && docker-compose -f hlfv1_alpha-docker-compose.yml down
+docker-compose -f docker-compose.yml kill && docker-compose -f docker-compose.yml down
 
 # remove the local state
 #rm -rf ~/.composer-connection-profiles/hlfv1
